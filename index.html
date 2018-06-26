@@ -2,95 +2,43 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Train Scheduler | Nathaniel Spry</title>
-
-	<!-- CSS Reset Sheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<!-- CSS Sheet -->
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
-    <!-- Google Fonts -->
-
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Taskie | Nathaniel Spry</title>
+	<!-- Styling -->
+	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="jumbotron">
-					<h1 class="display-3">Train Scheduler</h1>
-					<p class="lead">Choo Choo</p>
-				</div>
-			</div>
-		</div>
+	<header class="header"><!-- dropdown with the options creating a whole new list, or using existing presets -->
+		<h1 class="header-title">Taskie &#9660;</h1>
+	</header>
+	<main><!--  -->
+		<section class="content">
 
-		<div class="row">
-			<div class="col">
-				<table id="train-table" class="table">
-					<thead class="thead-inverse">
-						<tr>
-							<th>Train Name</th>
-							<th>Destination</th>
-							<th>Frequency (mins)</th>
-							<th>Next Arrival</th>
-							<th>Minutes Away</th>
-						</tr>
-					</thead>
-					<tbody></tbody>
-				</table>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col">
-				<div class="card">
-					<div class="card-header">
-						Add A New Train
-					</div>
-					<div class="card-block">
-						<form>
-							<div class="form-group">
-								<label for="">Train Name</label>
-								<input type="text" class="form-control" id="train-name-input">
-							</div>
-
-							<div class="form-group">
-								<label for="">Destination</label>
-								<input type="text" class="form-control" id="destination-input">
-							</div>
-
-							<div class="form-group">
-								<label for="">First Train Time</label>
-								<input type="text" class="form-control" id="first-train-time-input" placeholder="HH:mm in military format">
-							</div>
-
-							<div class="form-group">
-								<label for="">Frequency</label>
-								<input type="text" class="form-control" id="frequency-input" placeholder="In miniutes">
-							</div>
-						</form>
-						<button id="submit" type="submit" class="btn btn-primary">Submit</button>
-					</div>
-					<div class="card-footer">
-						<a href="#">Back to Top</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		</section>
+		<dialog class="modal">
+			<header class="">
+				<button>Back</button>
+				<button>Complete</button>
+			</header>
+			<input placeholder="Enter Task Here" />
+			<input placeholder="Due Date" />
+			<p>Add to List &#9660;</p>
+		</dialog>
+	</main>
+	<footer class="footer">
+    <div class="footer-top">
+      <button id="newTask" class="new-task-button">New Task</button>
+    </div>
+		<div class="footer-bottom">
+      <input placeholder="Enter Quick Task Here"/>
+      <button>Submit</button>
+    </div>
+	</footer>
 
 	<!-- jQuery -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- BS4 Tether -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<!-- Javascript -->
-		<!-- BS4 -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-		<!-- Firebase -->
-	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
 		<!-- Moment.js -->
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-		<!-- Train App -->
-	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 </html>
